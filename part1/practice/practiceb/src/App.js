@@ -99,3 +99,39 @@ console.log(avg)//3.5
 
 
 
+
+
+
+const arto = {
+  name: 'Arto Hellas',
+  age:35,
+  education: 'PhD',
+  greet:function(){
+    console.log('hello, my name is ' + this.name)
+  },
+}
+
+arto.growOlder=function(){
+  this.age+=1
+}
+
+arto.greet()
+
+
+
+const barto={
+  name:'Arto Hellas',
+  age:35,
+  education:'PhD',
+  greet:function(){
+    console.log('hello, my name is ' + this.name)
+  },
+  doAddition:function(a,b){
+    console.log(a+b)
+  },
+}
+
+barto.doAddition(1,4)
+
+const referenceToAddition=arto.doAddition
+referenceToAddition(10,15)

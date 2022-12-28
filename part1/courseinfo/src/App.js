@@ -27,9 +27,8 @@ const Content=(props)=>{
 
 const Total=(props)=>{
   console.log(props.addobj)
-  const total= props.addobj.parts[0].exercises + props.addobj.parts[1].exercises + props.addobj.parts[2].exercises
   return(
-    <p>{total}</p>
+    <p>{props.addobj.total()}</p>
   )
 }
 
@@ -47,11 +46,15 @@ const App = () =>{
       },
       {
         name:'State of a component',
-        exercises:14
-      }
+        exercises:14,
+       
+      },
     ],
-  }
-  
+    
+    total:function(){
+      return this.parts[0].exercises +this.parts[1].exercises+this.parts[2].exercises
+    }
+  }  
   
   return(
     <div>
