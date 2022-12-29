@@ -53,7 +53,7 @@ const App = () =>{
     
     total:function(){
       return this.parts[0].exercises +this.parts[1].exercises+this.parts[2].exercises
-    }
+    },
   }  
   
   return(
