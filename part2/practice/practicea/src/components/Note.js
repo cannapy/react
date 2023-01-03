@@ -1,6 +1,7 @@
-const Note =({note})=>{
+const Note =({key, note})=>{
+    console.log(note)
     return(
-        <li>{note.content}</li>
+        <li key={key}>{note.content}</li>
     )
 }
 
