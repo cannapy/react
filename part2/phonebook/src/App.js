@@ -1,19 +1,30 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Filter from './components/Filter'
 import PersonForm from './components/PersonForm'
 import Persons from './components/Persons'
+import axios from 'axios'
 
 function App() {
-  const [persons, setPersons]=useState([
-    {name:'Arto Hellas', number:'045-1233489',id:1},
-    {name:'Ada Lovelace', number:'045-234259',id:2},
-    {name:'Dan Abramov', number:'0425345234-89',id:3},
-    {name:'Mary Poppendieck', number:'5434533489',id:4},
-  ])
+  const [persons, setPersons]=useState([])
   const [newNumber, setNewNumber]=useState('')
   const [newName, setNewName]=useState('')
   const [personsToShow,setPersonsToShow]=useState(persons)
   const [filter, setFilter]=useState('')
+
+
+  useEffect(()=>{
+    console.log('effect')
+    axios
+      .get('http://localhost:3001/persons')
+      .then(response=>{
+        console.log('promise fulfilled')
+        setPersons(response.data)
+      })
+  },[])
+  console.log('render',persons.length)
+
+
+
   const addName=(event)=>{
     event.preventDefault()
     let contains=false
@@ -38,7 +49,6 @@ function App() {
       setNewName('')
       setNewNumber('')
       setFilter('')
-      const filter =document.getElementById('filter')
       setPersonsToShow(persons.filter((person)=>person.name.toLowerCase().includes(filter.toLowerCase())))
     }
     
