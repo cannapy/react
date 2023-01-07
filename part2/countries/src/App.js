@@ -6,11 +6,13 @@ const App=()=>{
   const [filter,setFilter]=useState('')
   const [countries, setCountries]=useState([])
   const [countriesToShow,setCountriesToShow]=useState([])
+
   
   const handleFilterChange =(event)=>{
     setFilter(event.target.value)
     console.log(event.target.value)
     setCountriesToShow(countries.filter((country)=>country.name.common.toLowerCase().includes(event.target.value.toLowerCase())))
+    setCountriesToShow(countriesToShow.map((country)=>country.lang=false))
     console.log(countriesToShow)
   }
 
