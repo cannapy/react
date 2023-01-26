@@ -2,9 +2,6 @@
 
 _Due: January 26th, 2023_
 
-Welcome to week two of CMPSC 297. In the last week we wrote some basic
-JavaScript to run in the browser, and installed Node.JS. This week, we'll
-actually _use_ Node.JS.
 
 This is the first week where we'll have a bit of "recommended" reading. It's not
 required, but we **_highly_** recommend that you read through the two markdown

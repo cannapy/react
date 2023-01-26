@@ -1,14 +1,14 @@
 {
-    "name": "cmpsc297hw2",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "rgb-hsv": "^1.0.0"
-    }
+  "name": "cmpsc297hw2",
+  "version": "1.0.0",
+  "description": "_Due: January 26th, 2023_",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rgb-hsv": "^1.0.0"
+  }
 }
