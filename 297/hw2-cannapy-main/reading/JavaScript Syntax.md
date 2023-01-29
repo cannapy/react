@@ -585,3 +585,22 @@ async function printTheseThings() {
 ```
 
 Neat. This will always print in the correct order.
+
+```js
+const logAfter1Second=()=>{
+    return new Promise((res,rej)=>{
+        setTimeout(()=>{
+            resolve("2");
+        },1000);
+    });
+}
+
+async function printTheseThings(){
+console.log("1");
+
+letValueToLog= await logAfter1Second();
+console.log(valueToLog);
+
+console.log("3")
+}
+```
