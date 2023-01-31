@@ -3,7 +3,7 @@ const P2 = () => {
         <>
             <h1>Computer Vision</h1>
             <h3>Description:
-                <p>Image classification, object detection, image segmentation, video classification, action detection</p>
+                <p>Object Detection</p>
             </h3>
             <h3>Programming languages:</h3>
             <ul>
